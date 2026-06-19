@@ -24,14 +24,16 @@
             cd make
             cmake ../..
             dir
-
-        - name: Run binary
-          run: |
-            dir
             cd bin/make
             dir         
             cmake --build . --config Release
+
+        - name: Run binary
+          run: |
+            copy *.dll Release\
             dir
             cd Release
             dir
             .\sobel.exe
+            echo $LASTEXITCODE
+            exit 0
