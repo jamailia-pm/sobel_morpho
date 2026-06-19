@@ -27,7 +27,7 @@ jobs:
       - name: Run binary
         run: |
           dir
-          cd bin/build
+          cd bin/make
           dir
           make
           cd Release
