@@ -14,8 +14,6 @@ jobs:
           git clone https://github.com/jamailia-pm/sobel_morpho.git
           winget --version
           winget install cmake          
-          cd sobel_morpho
-          dir
           CMakeVS2013.bat
           cd bin/make/
           make
