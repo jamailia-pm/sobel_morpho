@@ -18,7 +18,6 @@ jobs:
       - name: Build project
         run: |
           dir
-          cmake 
           cmake --build . --config Release
 
       - name: Run binary
