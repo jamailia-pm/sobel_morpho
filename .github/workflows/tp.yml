@@ -12,9 +12,6 @@ jobs:
       - name: Clone project
         run: git clone https://github.com/jamailia-pm/sobel_morpho.git
 
-      - name: Install CMake
-        run: winget install cmake --accept-package-agreements --accept-source-agreements
-
       - name: Build project
         run: |
           cd sobel_morpho
