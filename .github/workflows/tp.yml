@@ -22,10 +22,12 @@ jobs:
           cd bin
           mkdir make
           cd make
-          cmake --build ../.. --config Release
+          cmake ../..
+          dir
 
       - name: Run binary
         run: |
           dir
           cd bin/make
           dir         
+          
