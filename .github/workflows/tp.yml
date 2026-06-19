@@ -27,6 +27,8 @@ jobs:
       - name: Run binary
         run: |
           dir
-          cd sobel_morpho/build/Release
+          cd bin/build
           dir
-          ./sobel.exe
+          make
+          cd Release
+          sobel.exe
