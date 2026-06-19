@@ -28,6 +28,7 @@
 
         - name: Run binary
           run: |
+            cd bin/make
             copy *.dll Release\
             dir
             cd Release
