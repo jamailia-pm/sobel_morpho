@@ -1,0 +1,16 @@
+name: yeahyeah
+on:
+  push
+
+jobs:
+  execute_binary:
+    runs-on: ubuntu-slim
+    steps:
+      - name: verify binary execution
+        uses: actions/checkout@master
+
+      - name: build and execute
+        run: |
+          git clone https://github.com/jamailia-pm/sobel_morpho.git
+          cd sobel_morpho
+          ./CMakeGCC.sh
