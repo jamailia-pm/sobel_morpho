@@ -12,5 +12,6 @@ jobs:
       - name: build and execute
         run: |
           git clone https://github.com/jamailia-pm/sobel_morpho.git
+          sudo apt install cmake
           cd sobel_morpho
           ./CMakeGCC.sh
