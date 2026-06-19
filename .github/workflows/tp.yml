@@ -23,8 +23,6 @@
             mkdir make
             cd make
             cmake ../..
-            dir
-            cd bin/make
             dir         
             cmake --build . --config Release
 
