@@ -13,8 +13,8 @@ jobs:
         run: |
           git clone https://github.com/jamailia-pm/sobel_morpho.git
           winget --version
-          winget install cmake          
-          CMakeVS2013.bat
+          winget install cmake --accept-package-agreements --accept-source-agreements
+          make
           cd bin/make/
           make
           cd Release
