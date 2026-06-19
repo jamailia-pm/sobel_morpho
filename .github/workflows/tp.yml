@@ -10,7 +10,10 @@ jobs:
         uses: actions/checkout@master
 
       - name: Clone project
-        run: git clone https://github.com/jamailia-pm/sobel_morpho.git
+        run: |
+          dir
+          git clone https://github.com/jamailia-pm/sobel_morpho.git
+          dir
 
       - name: Build project
         run: |
