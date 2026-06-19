@@ -13,7 +13,10 @@ jobs:
         run: |
           git clone https://github.com/jamailia-pm/sobel_morpho.git
           sudo apt update
-          sudo apt install cmake libsdl2-dev pkg-config build-essential libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-mixer-dev          cd sobel_morpho
+          sudo apt install cmake libsdl2-dev pkg-config build-essential libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-mixer-dev          
+          cd sobel_morpho
           ./CMakeGCC.sh
-          make bin/make/
-          ./bin/make/Release/sobel
+          cd bin/make/
+          make
+          cd Release
+          ./sobel
