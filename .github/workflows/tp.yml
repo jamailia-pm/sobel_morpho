@@ -2,7 +2,7 @@ name: yeahyeah
 on:
   push
 
-
+jobs:
 execute_binary_windowscringemax:
   runs-on:  windows-latest
   steps:
