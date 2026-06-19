@@ -22,13 +22,10 @@ jobs:
           cd bin
           mkdir make
           cd make
-          cmake ../..
+          cmake ../.. --build
 
       - name: Run binary
         run: |
           dir
           cd bin/make
-          dir
-          make
-          cd Release
-          sobel.exe
+          dir         
