@@ -1,33 +1,35 @@
-name: yeahyeah
-on:
-  push
+  name: yeahyeah
+  on:
+    push
 
-jobs:
-  execute_binary_windowscringemax:
-    runs-on:  windows-latest
-    steps:
-      - name: verify binary execution on cringdows
-        uses: actions/checkout@master
+  jobs:
+    execute_binary_windowscringemax:
+      runs-on:  windows-latest
+      steps:
+        - name: verify binary execution on cringdows
+          uses: actions/checkout@master
 
-      - name: Clone project
-        run: |
-          dir
-          git clone https://github.com/jamailia-pm/sobel_morpho.git
-          dir
+        - name: Clone project
+          run: |
+            dir
+            git clone https://github.com/jamailia-pm/sobel_morpho.git
+            dir
 
-      - name: Build project
-        run: |
-          dir
-          mkdir bin
-          cd bin
-          mkdir make
-          cd make
-          cmake ../..
-          dir
+        - name: Build project
+          run: |
+            dir
+            mkdir bin
+            cd bin
+            mkdir make
+            cd make
+            cmake ../..
+            dir
 
-      - name: Run binary
-        run: |
-          dir
-          cd bin/make
-          dir         
-          
+        - name: Run binary
+          run: |
+            dir
+            cd bin/make
+            dir         
+            cmake --build . --config Release
+            dir
+            
