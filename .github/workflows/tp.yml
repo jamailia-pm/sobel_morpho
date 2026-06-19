@@ -14,11 +14,13 @@ jobs:
 
       - name: Build project
         run: |
-          cd sobel_morpho
+          dir
           cmake 
           cmake --build . --config Release
 
       - name: Run binary
         run: |
+          dir
           cd sobel_morpho/build/Release
+          dir
           ./sobel.exe
