@@ -32,4 +32,6 @@
             dir         
             cmake --build . --config Release
             dir
-            
+            cd Release
+            dir
+            sobel.exe
