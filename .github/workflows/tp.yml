@@ -34,4 +34,4 @@
             dir
             cd Release
             dir
-            sobel.exe
+            .\sobel.exe
