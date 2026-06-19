@@ -4,7 +4,7 @@ on:
 
 jobs:
   execute_binary:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: verify binary execution
         uses: actions/checkout@master
@@ -12,7 +12,5 @@ jobs:
       - name: build and execute
         run: |
           git clone https://github.com/jamailia-pm/sobel_morpho.git
-          sudo apt update
-          sudo apt install cmake libsdl2-dev
           cd sobel_morpho
           ./CMakeGCC.sh
