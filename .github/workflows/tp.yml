@@ -22,12 +22,10 @@ jobs:
           cd bin
           mkdir make
           cd make
-          cmake ../.. -G "Visual Studio 17 2022"
-          cmake --build . --config Release
+          cmake --build ../.. --config Release
 
       - name: Run binary
         run: |
           dir
           cd bin/make
           dir         
-          cmake --build . --config Release
