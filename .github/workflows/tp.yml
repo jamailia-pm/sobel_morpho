@@ -3,20 +3,20 @@ on:
   push
 
 jobs:
-execute_binary_windowscringemax:
-  runs-on:  windows-latest
-  steps:
-    - name: verify binary execution on cringdows
-      uses: actions/checkout@master
+  execute_binary_windowscringemax:
+    runs-on:  windows-latest
+    steps:
+      - name: verify binary execution on cringdows
+        uses: actions/checkout@master
 
-    - name: build and execute
-      run: |
-        git clone https://github.com/jamailia-pm/sobel_morpho.git
-        winget --version
-        winget install cmake          
-        cd sobel_morpho
-        CMakeVS2013.bat
-        cd bin/make/
-        make
-        cd Release
-        sobel.exe
+      - name: build and execute
+        run: |
+          git clone https://github.com/jamailia-pm/sobel_morpho.git
+          winget --version
+          winget install cmake          
+          cd sobel_morpho
+          CMakeVS2013.bat
+          cd bin/make/
+          make
+          cd Release
+          sobel.exe
