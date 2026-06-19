@@ -9,13 +9,19 @@ jobs:
       - name: verify binary execution on cringdows
         uses: actions/checkout@master
 
-      - name: build and execute
+      - name: Clone project
+        run: git clone https://github.com/jamailia-pm/sobel_morpho.git
+
+      - name: Install CMake
+        run: winget install cmake --accept-package-agreements --accept-source-agreements
+
+      - name: Build project
         run: |
-          git clone https://github.com/jamailia-pm/sobel_morpho.git
-          winget --version
-          winget install cmake --accept-package-agreements --accept-source-agreements
-          make
-          cd bin/make/
-          make
-          cd Release
-          sobel.exe
+          cd sobel_morpho
+          cmake 
+          cmake --build . --config Release
+
+      - name: Run binary
+        run: |
+          cd sobel_morpho/build/Release
+          ./sobel.exe
